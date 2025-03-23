@@ -4,6 +4,7 @@ from Vk_modul import get_post_vk
 from TG_modul import maintg
 import asyncio
 from config import  NAMES_GROUP_LIST
+#Мастер ветка
 #Приложения для сбора постов из Вконтакте, и отправкой их в канал телеграма
 # Для работы вставьте свои данные в файле Config
 def main():
