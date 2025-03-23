@@ -115,6 +115,8 @@ async def sending_posts():
                         except aiogram.exceptions.TelegramRetryAfter as e:
                             print(f"Ошибка: {e}. Повторная попытка через {e.retry_after} секунд.")
                             await asyncio.sleep(e.retry_after)  # Ждем указанное время перед повторной попыткой
+                            #Отправка ошибки в чат с ботом
+                            await bot.send_message(chat_id=ID_CHAT_BOT, text=f"Ошибка: {e}. Повторная попытка через {e.retry_after} секунд.")
                         except Exception as e:
                             print(f"Произошла ошибка: {e}")
 
